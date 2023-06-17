@@ -1,13 +1,4 @@
-import torch
-from torch import nn
-import os
-from torch.utils.data import DataLoader
-from torchvision import datasets, transforms
-from torch.utils.data import DataLoader
-from tqdm.auto import tqdm
-import torchvision
-import matplotlib.pyplot as plt
-import cv2
+from torchvision import transforms
 
 data_transform_no_augmentation = transforms.Compose([
     transforms.Resize(size=(224, 348)),

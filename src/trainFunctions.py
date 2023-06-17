@@ -2,12 +2,10 @@ import torch
 from torch import nn
 import os
 from torch.utils.data import DataLoader
-from torchvision import datasets, transforms
+from torchvision import datasets
 from torch.utils.data import DataLoader
 from tqdm.auto import tqdm
-import torchvision
-import matplotlib.pyplot as plt
-import cv2
+
 from transforms import data_transform_no_augmentation
 
 

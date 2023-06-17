@@ -12,7 +12,7 @@ import cv2
 
 class TinyVGG(nn.Module):
     """
-    Model architecture copying TinyVGG from: 
+    Model architecture copying TinyVGG from:
     https://poloclub.github.io/cnn-explainer/
     """
 
@@ -44,7 +44,7 @@ class TinyVGG(nn.Module):
         self.classifier = nn.Sequential(
             nn.Flatten(),
             # Where did this in_features shape come from?
-            # It's because each layer of our network compresses and changes the shape of our inputs data.
+            # It's because each layer of our network compresses and changes the shape of our inputs' data.
             nn.Linear(in_features=hidden_units * 56 * 87,
                       out_features=output_shape)
         )
