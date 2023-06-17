@@ -14,7 +14,7 @@ def main():
     train_dataloader_trivial, test_dataloader_trivial = getDataLoader(train_data_trivial, test_data_Trivial)
     torch.manual_seed(42)
 
-    model_0 = TinyVGG(input_shape=3,  # number of color channels (3 for RGB) 
+    model_0 = TinyVGG(input_shape=3,  # number of color channels (3 for RGB)
                       hidden_units=10,
                       output_shape=len(class_names)).to(device)
 
@@ -23,7 +23,7 @@ def main():
     optimizer = torch.optim.Adam(params=model_0.parameters(), lr=0.001)
     # poniższy kod służy do wczytywania sieci w celu jej dalszego uczenia
     # checkpoint = torch.load("model_trivial_0.pt")
-    # model_0.load_state_dict(checkpoint['model_state_dict']) 
+    # model_0.load_state_dict(checkpoint['model_state_dict'])
     # optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
     # model_0.train()
 
@@ -38,7 +38,7 @@ def main():
                             epochs=NUM_EPOCHS)
 
     # poniższy kod służy do wczytania sieci i zrobienia predykcji
-    # model_0.load_state_dict(torch.load("model_trivial_0.pt")['model_state_dict']) 
+    # model_0.load_state_dict(torch.load("model_trivial_0.pt")['model_state_dict'])
     # model_0.eval()
     # pred_and_plot_image(device, model_0, "tarot_card_0.jpg", class_names, custom_image_tr)
     # pred_and_plot_image(device, model_0, "tarot_card_1.jpg", class_names, custom_image_tr)
